@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Progress Bar</title>
+		<link rel="stylesheet" href="style.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+	</head>
+	<body>
+
+		<!--progress bar start-->
+		<div class="progress-bar">
+			<span style="width:100%"></span>
+		</div>
+		<!--progress bar end-->
+
+		<script type="text/javascript">
+		$(function(){
+			$("span").each(function(){
+				$(this)
+				.data("origWidth", $(this).width())
+				.width(0)
+				.animate({
+					width: $(this).data("origWidth")
+				},2000);
+			});
+		});
+		</script>
+
+	</body>
+</html>

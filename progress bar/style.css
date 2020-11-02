@@ -1,0 +1,54 @@
+body{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-bar{
+  background: #555;
+  width: 600px;
+  height: 30px;
+  position: relative;
+  border-radius: 25px;
+  padding: 10px;
+}
+
+.progress-bar span{
+  background: #1DC4E7;
+  display: block;
+  height: 100%;
+  border-radius: 25px;
+  position: relative;
+}
+
+.progress-bar span:after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: -webkit-gradient(linear, 0 0, 100% 100%,
+    color-stop(.25, rgba(255, 255, 255, .2)),
+    color-stop(.25, transparent),
+    color-stop(.5, transparent),
+    color-stop(.5, rgba(255, 255, 255, .2)),
+    color-stop(.75, rgba(255, 255, 255, .2)),
+    color-stop(.75, transparent), to(transparent)
+    );
+  background-size: 50px 50px;
+  animation: move 2s linear infinite;
+  border-radius: 25px;
+}
+
+@-webkit-keyframes move{
+  0%{
+    background-position: 0 0;
+  }
+  100%{
+    background-position: 50% 50%;
+  }
+}

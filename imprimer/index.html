@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container"  >
+    <p id="myElementId">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae dolor harum saepe eius debitis. Nisi provident debitis reiciendis, quo id cum repellat accusantium labore rem maxime quidem facere ea totam!Ea culpa blanditiis adipisci autem assumenda nemo ipsum ad voluptates minima officia ratione doloremque enim ducimus consequatur labore ab, laborum animi reprehenderit modi iste perferendis vitae, cum vel corporis. Explicabo?
+    </p>
+    <p id="myElementId1">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat mollitia ducimus id quo quasi porro iste quam, possimus quae ipsa natus nulla, voluptas, cumque laboriosam! Optio ut repellat suscipit veniam.
+      Magnam necessitatibus vel accusantium commodi, facilis ipsum quae eveniet! Nihil aperiam quos possimus aliquid aspernatur minima ratione debitis saepe ex! Deleniti dignissimos, laborum distinctio excepturi beatae delectus corporis voluptate mollitia!
+      Quam veniam eveniet dolores natus nihil quibusdam quia ad itaque. Delectus aperiam omnis iste quia, unde voluptatibus veritatis perferendis obcaecati explicabo dolor ipsum quibusdam fugit mollitia velit impedit, aliquid numquam.
+      Suscipit temporibus expedita, at unde autem nostrum mollitia odit assumenda, totam nam obcaecati distinctio velit vitae accusamus natus ea libero nulla voluptatibus numquam reiciendis. Possimus debitis perspiciatis consectetur aspernatur commodi.
+    </p>
+    <button onClick="printer('myElementId')">imprimer</button>
+  </div>
+ 
+  <script>
+function printer(elemet){
+ var restorepage = document.body.innerHTML;
+ var printContent = document.getElementById(elemet).innerHTML;
+ document.body.innerHTML =printContent;
+ window.print();
+  document.body.innerHTML =restorepage;
+}
+  </script>
+</body>
+</html>
