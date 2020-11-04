@@ -9,6 +9,9 @@ $mail = new PHPMailer(true);
 
 $alert = '';
 
+  const USERNAME ="dioneassane0290@gmail.com";
+  const PASSWORD ="youngmoney12345"; 
+  private $dsn = "mysql:host=localhost;dbname=administration";
 if(isset($_POST['submit'])){
   $name = $_POST['name'];
   $email = $_POST['email'];
